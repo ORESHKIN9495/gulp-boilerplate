@@ -13,4 +13,14 @@ html {
 }
 
 body {
+  canvas {
+    background: rgba(51, 179, 188, 0.384);
+    display: block;
+    margin: 0 auto;
+    border: 20px solid rgb(108, 59, 33);
+  }
+
+  overflow-x: hidden;
+
+  background: rgba(60, 191, 0, 0.791);
 }

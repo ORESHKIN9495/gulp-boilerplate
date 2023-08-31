@@ -13,14 +13,20 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  height: 100vh;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+
   canvas {
-    background: rgba(51, 179, 188, 0.384);
-    display: block;
-    margin: 0 auto;
-    border: 20px solid rgb(108, 59, 33);
+    border: 5px solid #ccc;
   }
 
   overflow-x: hidden;
-
-  background: rgba(60, 191, 0, 0.791);
 }

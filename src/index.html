@@ -1,29 +1,112 @@
 <!DOCTYPE html>
 
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <![endif]-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <!--[if IE]>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>#</title>
 
-  <title>#</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  </head>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-</head>
+  <body>
+    <section class="start">
+      <p>Нажми <span>Старт</span> что бы начать</p>
+      <button>СТАРТ</button>
+    </section>
 
-<body>
+    <section class="over">
+      <p>Нажми <span>Рестарт</span> что бы начать</p>
+      <button>РЕСТАРТ</button>
+    </section>
+    <section class="score">
+      <div class="score_deg">
+        <span>
+          <p class="score_title">Score:</p>
+          <p class="score_counter">0</p>
+        </span>
 
-  <canvas id="myCanvas">
-  </canvas>
-  <script src="assets/js/main.js"></script>
-</body>
+        <div class="score_deg_helth">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+            />
+          </svg>
 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="score_enemy_helth">
+        <p>Enemy helth</p>
+        <figure></figure>
+      </div>
+    </section>
+    <canvas id="myCanvas"></canvas>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

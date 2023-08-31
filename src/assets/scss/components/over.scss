@@ -1,0 +1,31 @@
+.over {
+  background: #bdbbb0;
+  color: #353535;
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  span {
+    color: #f7f0f5;
+  }
+
+  button {
+    background-color: #f7f0f5;
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: #353535;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #decbb7;
+    }
+  }
+}

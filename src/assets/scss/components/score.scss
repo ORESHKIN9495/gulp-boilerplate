@@ -1,0 +1,54 @@
+.score {
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 120px;
+  padding: 20px;
+  position: absolute;
+  align-items: start;
+  top: 0px;
+  width: 100%;
+
+  &_deg {
+    display: grid;
+    color: #636262;
+    gap: 20px;
+
+    span {
+      display: flex;
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &_deg_helth {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+    svg {
+      fill: #ff004c;
+      width: 30px;
+    }
+  }
+
+  &_enemy_helth {
+    display: grid;
+    height: fit-content;
+    gap: 20px;
+    justify-self: flex-end;
+
+    p {
+      color: #636262;
+      font-size: 30px;
+    }
+
+    figure {
+      background: #ff004c;
+      border-radius: 2px;
+      padding: 15px;
+      width: 100%;
+    }
+  }
+}

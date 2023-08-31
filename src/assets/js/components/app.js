@@ -27,8 +27,6 @@ window.addEventListener("DOMContentLoaded", () => {
 canvas.width = 600;
 canvas.height = 900;
 
-let game;
-
 const gravity = 0.5;
 
 const keys = {
@@ -141,8 +139,25 @@ class Ammo {
 
 const ammoItems = [];
 
+const random = (min, max) => {
+  return Math.round(Math.random() * (max - min) + min);
+};
+
+setInterval(() => {
+  enemies.forEach((e) => {
+    e.velocity.y = random(-2, 5);
+  });
+}, 1000);
+
+setInterval(() => {
+  enemies.forEach((e) => {
+    e.velocity.x = random(-2, 3);
+  });
+}, 1000);
+
 const animate = () => {
-  game = requestAnimationFrame(animate);
+  const game = requestAnimationFrame(animate);
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   deg.update();
 
@@ -163,8 +178,8 @@ const animate = () => {
     enemies.push(
       new Enemy({
         position: {
-          x: Math.floor((Math.random() * (canvas.width + canvas.height)) / 2),
-          y: 0,
+          x: Math.floor(Math.random() * canvas.width),
+          y: canvas.height / 2,
         },
         velocity: {
           x: 2,
@@ -175,17 +190,19 @@ const animate = () => {
   }
 
   enemies.forEach((e, idx) => {
-    e.position.x += e.velocity.x;
-
     if (e.position.x + e.width + e.velocity.x <= 0 + e.width) {
-      e.velocity.x = 2;
+      e.velocity.x = 0;
     }
 
     if (e.position.x + e.width + e.velocity.x >= canvas.width) {
-      e.velocity.x = -2;
+      e.velocity.x = 0;
     }
 
-    if (e.position.y + e.height + e.velocity.y > canvas.height) {
+    if (e.position.y + e.height + e.velocity.y < 50) {
+      e.velocity.y = 0;
+    }
+
+    if (e.position.y + e.height + e.velocity.y >= canvas.height) {
       cancelAnimationFrame(game);
       over.style.display = "flex";
     }

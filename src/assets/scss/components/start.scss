@@ -1,5 +1,5 @@
-.start {
-  background: #bdbbb0;
+.over {
+  background-color: #bdbbb0;
   color: #353535;
   position: absolute;
   inset: 0;
@@ -13,19 +13,49 @@
   flex-direction: column;
   gap: 40px;
 
-  span {
-    color: #f7f0f5;
+  svg {
+    animation: arrow 0.5s ease infinite;
+    height: 100px;
+    width: 100px;
+
+    @keyframes arrow {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(10%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   }
 
   button {
-    background-color: #f7f0f5;
-    padding: 10px 40px;
-    border-radius: 10px;
-    color: #353535;
+    background-color: #a2b934;
+    box-shadow: 0 10px 0 0 #678316;
+    border-radius: 100px;
+    padding: 20px 80px;
+    color: #c6d74c;
+    font-size: 30px;
 
     &:hover {
+      animation: button 1s ease infinite;
       cursor: pointer;
-      background-color: #decbb7;
+    }
+
+    @keyframes button {
+      0% {
+        color: #c6d74c;
+      }
+
+      50% {
+        color: #425213;
+      }
+      100% {
+        color: #c6d74c;
+      }
     }
   }
 }

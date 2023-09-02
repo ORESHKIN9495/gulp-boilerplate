@@ -2,7 +2,7 @@
   background-color: #ccc;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 120px;
+  height: fit-content;
   padding: 20px;
   position: absolute;
   align-items: start;

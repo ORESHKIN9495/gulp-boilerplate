@@ -2,17 +2,17 @@
   //   --scheme-v1: #ffffff;
 }
 
-// @font-face {
-//   font-family: "font-name";
-//   src: local("../fonts/font-name"),
-//     url("../fonts/font-name.ext") format("truetype");
-//   font-weight: 700;
-// }
+@font-face {
+  font-family: "GloriaHallelujah";
+  src: url("/font/GloriaHallelujah-Regular.ttf") format("truetype");
+}
 
 html {
 }
 
 body {
+  background-color: #bdbbb0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ body {
 
   height: 100vh;
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Gloria Hallelujah", cursive;
   font-weight: 300;
   font-size: 48px;
 
